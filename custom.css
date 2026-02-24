@@ -388,3 +388,88 @@ body {
         right: auto;
     }
 }
+
+/* dz */
+/* Плавная прокрутка для всей страницы */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px; 
+}
+
+/* Hero секция с градиентом */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin-top: -56px; 
+    padding-top: 56px;
+}
+
+/* Заголовки секций */
+.section-title {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #667eea;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Эффекты для карточек навыков */
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+/* Эффекты для карточек портфолио (Hover) */
+.portfolio-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-card img {
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2)!important;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Стили для футера */
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffc107 !important;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title::after {
+        width: 30%;
+    }
+}
